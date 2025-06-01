@@ -2,33 +2,173 @@
   "Båtförsäkring": [
     {
       "question": "Har jag en skyldighet att försäkra min båt?",
-      "answer": "Nej, men det är starkt rekommenderat att du gör det."
+      "answer": "Nej, du har ingen skyldighet som båtägare att försäkra din båt. Däremot rekommenderar vi att du försäkrar din båt med åtminstone en <a href='https://www.atlantica.se/ansvarsforsakring/'>ansvarsförsäkring<a/>. Ansvarsförsäkringen skyddar dig ekonomiskt mot skadeståndskrav från tredje man. Exempelvis om du kör in i annan båt och den skadas vid kollisionen. Ansvarsförsäkringen ersätter dock inte skador på din båt, utan då behöver du en <a href='https://www.atlantica.se/batforsakring/'>helförsäkring<a/>. Utöver det kräver båtklubbar oftast en ansvarsförsäkring för att du ska kunna förvara din båt på klubben."
     },
     {
-      "question": "Vad är försäkrat i min båtförsäkring?",
-      "answer": "Det kan inkludera skador på båten, ansvarsskydd och mer."
+      "question": "Vad är försäkrat mi min båtförsäkring?",
+      "answer": "Vår båtförsäkring gäller båtar som används i privat bruk, om inget annat har avtalats. Försäkringen gäller även för båtens utrustning och tillbehör.<br/><br/>Du kan läsa mer i vårt Villkor."
     },
     {
       "question": "Vad kostar det att försäkra min båt?",
-      "answer": "Det beror på båtens typ, storlek, och var den används."
+      "answer": "Det är flera delar som styr vad din båtförsäkring kommer att kosta. Först och främst behöver vi information om båten, såsom typ av båt, båtens värde, båtens och motorns ålder, båtens storlek, hästkrafter, fart och stöldskydd. Därtill påverkas priset av försäkringens omfattning, tilläggsförsäkringar och självrisker samt ägarens ålder och båtens geografiska placering.<br/><br/>För att ta reda på vad en försäkring, för din båt, kostar hos oss kan du antingen räkna fram premien själv här på vår hemsida, begära en offert eller kontakta vår kundtjänst på 0200-27 27 27"
+    },
+    {
+        "question": "Vad gäller min båtförsäkring?",
+        "answer": "Din båtförsäkring gäller i: Sverige, Finland, Danmark, Norges fastland och respektive länders territorialvatten, Östersjön med angränsande hamnar, vikar och hav, Kattegatt och Skagerack öster om linjen Hanstholm-Lindesnes.<br/><br/>Vill du åka utanför försäkringens giltighetsområde kan du teckna våra tilläggsförsäkringar Nordsjön eller Europa."
+    },
+    {
+        "question": "Kan jag använda båten året runt?",
+        "answer": "Våra helförsäkringar gäller året runt. För skador i sjön under tiden 1 november till 31 mars gäller försäkringen dock med dubbel självrisk."
+    },
+    {
+        "question": "Hur gör jag om jag vill åka utanför försäkringens giltighetsområde?",
+        "answer": "Vill du åka utanför försäkringens giltighetsområde kan du teckna våra tilläggsförsäkringar Nordsjön eller Europa. "
+    },
+    {
+        "question": "Vad har jag för självrisk?",
+        "answer": "Självrisken väljer du när du tecknar din båtförsäkring och din valda självrisk framgår av ditt försäkringsbrev. Läs mer om självrisker."
+    },
+    {
+        "question": "Får jag hyra ut min båt?",
+        "answer": "Hyr du ut båten privat i max tre veckor gäller din båtförsäkring utan premietillägg. Ska du hyra ut din båt via båtuthyrningsföretag eller förmedlingsföretag måste du teckna vår tilläggsförsäkring Uthyrning."
+    },
+    {
+        "question": "Får jag låna ut min båt?",
+        "answer": "Din båtförsäkring gäller även för personer som har fått tillstånd av dig att bruka din båt"
+    },
+    {
+        "question": "Kan jag försäkra båten i mitt företag?",
+        "answer": "Ja, du kan försäkra och använda båten i ditt företag. Vi försäkrar vanligtvis fritidsbåtar som används yrkesmässigt, exempelvis fiskeguider, charter och taxibåtar. Däremot försäkrar vi inte kommersiella fartyg, såsom containerbåtar.<br/><br/>Ska du använda båten kommersiellt och köra passagerare behöver du också en Passageraransvarsförsäkring."
+    },
+    {
+        "question": "Får jag delta i kappsegling med min båt?",
+        "answer": "Ja, men du måste meddela oss att du avser att kappsegla med din båt. Kontakta vår kundtjänst på 0200-27 27 27."
+    },
+    {
+        "question": "Kan jag försäkra båttrailern i min båt försäkring?",
+        "answer": "Ja, du kan försäkra din båttrailer eller båtvagn i din båtförsäkring. Trailerförsäkringen en tilläggsförsäkring som omfattar brand, stöld och vagnskada. Du kan läsa mer om trailerförsäkringen här."
+    },
+    {
+        "question": "Ingår jollen till min båt i min båtförsäkring?",
+        "answer": "Jolle med motor upp till 20 hk och värde 20 000 SEK ingår i försäkringen, men jollens uppgifter måste framgå av ditt försäkringsbrev. "
+    },
+    {
+        "question": "Vad gäller vid längre uppställning och vinterförvaring av min båt?",
+        "answer": "Om du ställer upp båten för vinterförvaring eller förvaring på permanent uppställningsplats bör du förvara motorn separat från båten samt att du tömmer båten på ej fastmonterad utrustning och personlig lösegendom.<br/><br/>För motorer under 25 hk är det ett krav att motorn plockas av och förvaras i ett låst utrymme. Motorer på 25 hk eller mer får av praktiska skäl sitta kvar, men då måste motorkåpa och växelhus monteras av, om detta inte strider mot tillverkarens garantiåtagande. Har du inte möjlighet att göra detta själv kan du exempelvis be en verkstad att demontera växelhus/propeller/drev.<br/><br/>Motorn skall även vara fastlåst med ett godkänt motorlås. Motorer på 300 hk och uppåt får sitta kvar utan att ha motorlås. Förse motorn med ett överdrag/skyddshuva.<br/><br/>Emellertid, om du förvarar hela båten inlåst i ett utrymme som bara du disponerar eller om båten lämnas för förvaring inomhus eller förvaring i ställage över marknivå hos marin verkstad gäller ej ovanstående krav."
+    },
+    {
+        "question": "Vad täcker Maskinskadeförsäkringen?",
+        "answer": "Maskinskadeförsäkring (tidigare Exklusiv eller Exklusiv Motor) är en tilläggsförsäkring som går att teckna för motorer som inte är äldre än 10 år vid teckningstillfället.<br/><br/>Om du får en maskinskada är det viktigt att skadeorsaken fastställs, det är först då vi kan ta ställning huruvida skadan är ersättningsbar eller ej. Lämna din motor till en verkstad som är auktoriserad för ditt specifika motormärke.<br/><br/>Tilläggsförsäkringen täcker skador på motor, backslag/drev, motorinstrument, elkomponenter och annan maskinell utrustning orsakad av plötslig och oförutsedd händelse.<br/><br/>Skadan får alltså inte bero exempelvis eftersatt service, normalt slitage, rost, korrosion eller andra orsaker som uppstår över längre tid."
+    },
+    {
+        "question": "Har du rätt försäkringsvärde på båten?",
+        "answer": "Vi rekommenderar att du årligen se över värdet på din båt och att du vid, förändring av båtens värde, meddelar oss det nya värdet. Båtens värde påverkar priset på din försäkring.<br/><br/>Om du exempelvis gör förändringar på båten, exempelvis installerar ny utrustning, kan båten öka i värde. Missar du att meddela oss det nya värdet är risken att båten är underförsäkrad.<br/><br/>Med åren brukar båtar även tappa i värde. Ändrar du då inte försäkringsvärdet till båtens aktuella marknadsvärde riskerar du att betala för mycket för försäkringen samt vad du kan få i ersättning vid en eventuell skada.<br/><br/>För att ta reda på försäkringsvärdet rekommenderar vi att du kontaktar din lokala båthandlare. Annonssidor kan också ge en föraning om värdet, men det är oftast inte lika tillförlitligt som när du frågar en båthandlare."
     }
   ],
   "Rabatter": [
     {
-      "question": "Finns det samlingsrabatt?",
-      "answer": "Ja, om du har flera försäkringar samlade får du rabatt."
+      "question": "Vilka stöldförebyggande åtgärder ger rabatt?",
+      "answer": "Följande stöldförebyggande åtgärder ger rabatt på din båtförsäkring:<ul><li>Keel-Pro</li><li>Startspärr</li><li>Söksystem</li><li>Stöldskyddsmärkning</li><li>Vinterförvaring hos marina/varv</li></ul>Du kan läsa mer under Rabatter."
+    },
+    {
+      "question": "Kan jag få rabatt på min båtförsäkring?",
+      "answer": "Ja, vi ger rabatt för åtgärder som minskar risken för stöld och skada. Du kan även få rabatt på premien om du är skadefri samt som bonuskund hos Moderna Försäkringar. Läs mer under Rabatter."
     }
   ],
   "Skada": [
     {
-      "question": "Vad gör jag om min båt skadas?",
-      "answer": "Anmäl skadan så snabbt som möjligt via Mina sidor."
+      "question": "Hur går jag tillväga vid en skada på min båt och motor?",
+      "answer": "Vid skada en skada är tillvägagångssättet enligt följande:"
+    },
+    {
+      "question": "Jag har kört på grannbåten, hur går jag tillväga?",
+      "answer": "Lämna dina kontaktuppgifter till båtgrannen och anmäl skadan till oss. Fota gärna skadorna! Ägaren till grannbåten ska även anmäla skadan till sitt försäkringsbolag. Därefter sköts ärendet i regel mellan bolagen (även om detta är Atlantica). Anmäl din skada här eller kontakta oss på 0200-27 27 27."
+    },
+    {
+      "question": "Hur anmäler jag en skada på min båt och motor till Atlantica?",
+      "answer": "I de flesta fall går det bra att göra anmälan skadan till oss direkt på telefon dagtid. Du når oss på telefon 0200-27 27 27. I vissa fall ber vi dig även komplettera med en skriftlig anmälan, den går att fylla i här. "
+    },
+    {
+      "question": "Hur går jag tillväga om jag har fått stöldskada/skadegörelse på din båt och/eller motor?",
+      "answer": "Vid en stöldskada/skadegörelse på din båt och/eller motor går tillväga enligt följande: "
+    },
+    {
+      "question": "Hur går jag tillväga om jag har fått min båt stulen?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Vad händer efter jag har gjort min anmälan?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Hur värderar ni min båt, motor och utrustning?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Vad blir ersättningen om jag får en skada på min båt eller motor?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Vad blir min kostnad vid en skada?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Vad är nyvärdersättning?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Kan jag få nedsättning på ersättningen i en skada?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Min segelbåt har skadats i hårt väder, täcker min försäkring skador på mast, segel och rigg?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Vad gör jag om jag behöver assistans på sjön?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
     }
   ],
   "Betalning": [
     {
-      "question": "Hur betalar jag min försäkring?",
-      "answer": "Du kan betala via autogiro eller faktura."
+      "question": "Hur anmäler jag e-faktura?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Hur anmäler jag autogiro?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Hur anmäler jag autogior via min internetbank?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Kan någon annan betala min försäkring via autogiro?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "När dras pengar från mitt konto som är kopplat på autogiro?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Hur mycket kommer dras ifrån mitt konto?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Det fanns inte tillräckligt med pengar på kontot vid autogirodragningen, vad händer nu?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Varför varierar försäkringspremien över året?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Med vilka betalningsalternativ kan jag betala min båtförsäkring?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    {
+      "question": "Hur betalar jag från utlandet?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
     }
   ]
 }
