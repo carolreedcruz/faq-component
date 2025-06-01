@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import BlueArrow from "../assets/arrow.blue.png";
 import WhiteArrow from "../assets/TH-Arrow.white.png";
 
@@ -17,55 +17,84 @@ type Props = {
 
 function FAQSection({ id, title, questions, isOpen, toggleSection }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const questionRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const toggleQuestion = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
+  useEffect(() => {
+    if (isOpen && questionRefs.current[0]) {
+      questionRefs.current[0].focus();
+    }
+  }, [isOpen]);
+
   return (
-    <div className="faq-group" id={id}>
+    <section
+      className="faq-group"
+      id={id}
+      aria-labelledby={`${id}-heading`}
+      role="region"
+    >
       <button
         className={`faq-section-toggle ${isOpen ? "open" : ""}`}
         onClick={toggleSection}
+        aria-expanded={isOpen}
+        aria-controls={`${id}-list`}
+        id={`${id}-heading`}
       >
         {title}
         <img
           src={WhiteArrow}
-          alt="arrow"
+          alt=""
+          aria-hidden="true"
           className={`section-arrow ${isOpen ? "open" : ""}`}
         />
       </button>
 
       {isOpen && (
-        <ul className="faq-list">
-          {questions.map((item, index) => (
-            <li key={index} className="faq-item">
-              <button
-                className={`faq-question ${
-                  openIndex === index ? "active" : ""
-                }`}
-                onClick={() => toggleQuestion(index)}
-              >
-                {item.question}
-                <img
-                  src={BlueArrow}
-                  alt="arrow"
-                  className={`question-arrow ${
-                    openIndex === index ? "open" : ""
-                  }`}
-                />
-              </button>
-              {openIndex === index && (
-                <div
-                  className="faq-answer"
-                  dangerouslySetInnerHTML={{ __html: item.answer }}
-                />
-              )}
-            </li>
-          ))}
+        <ul className="faq-list" id={`${id}-list`}>
+          {questions.map((item, index) => {
+            const isOpenItem = openIndex === index;
+            const questionId = `${id}-question-${index}`;
+            const answerId = `${id}-answer-${index}`;
+
+            return (
+              <li key={index} className="faq-item">
+                <button
+                  ref={(el) => {
+                    questionRefs.current[index] = el;
+                  }}
+                  className={`faq-question ${isOpenItem ? "active" : ""}`}
+                  onClick={() => toggleQuestion(index)}
+                  aria-expanded={isOpenItem}
+                  aria-controls={answerId}
+                  id={questionId}
+                >
+                  {item.question}
+                  <img
+                    src={BlueArrow}
+                    alt=""
+                    aria-hidden="true"
+                    className={`question-arrow ${isOpenItem ? "open" : ""}`}
+                  />
+                </button>
+
+                {isOpenItem && (
+                  <div
+                    id={answerId}
+                    className="faq-answer"
+                    role="region"
+                    aria-labelledby={questionId}
+                    dangerouslySetInnerHTML={{ __html: item.answer }}
+                  />
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
 

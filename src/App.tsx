@@ -6,21 +6,39 @@ import FooterImage from "./assets/Footer.png";
 function App() {
   return (
     <div className="app">
-      <img src={NavbarImage} alt="Header" className="static-image" />
+      <header role="banner">
+        <img
+          src={NavbarImage}
+          alt="Navigationsmeny med logotyp och länkar"
+          className="static-image"
+        />
+      </header>
 
-      <section className="hero-section">
-        <div className="hero-text">
-          <h1>Vanliga frågor och svar</h1>
-          <p>
-            Här har vi samlat vanliga frågor och svar om våra försäkringar,
-            betalningar och villkor.
-          </p>
-        </div>
-      </section>
+      <main>
+        <section
+          className="hero-section"
+          aria-labelledby="faq-title"
+          role="region"
+        >
+          <div className="hero-text">
+            <h1 id="faq-title">Vanliga frågor och svar</h1>
+            <p>
+              Här har vi samlat vanliga frågor och svar om våra försäkringar,
+              betalningar och villkor.
+            </p>
+          </div>
+        </section>
 
-      <FAQ />
+        <FAQ />
+      </main>
 
-      <img src={FooterImage} alt="Footer" className="static-image" />
+      <footer role="contentinfo">
+        <img
+          src={FooterImage}
+          alt="Företagsinformation, supportlänkar och kontaktuppgifter"
+          className="static-image"
+        />
+      </footer>
     </div>
   );
 }

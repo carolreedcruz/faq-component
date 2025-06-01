@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px; /* remove top/bottom padding */
+  padding: 0 20px;
 }
 
 .hero-section::before {

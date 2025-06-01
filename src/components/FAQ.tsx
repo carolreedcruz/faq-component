@@ -1,7 +1,7 @@
 import { useState } from "react";
 import faqData from "../data/faqs.json";
 import FAQSection from "./FAQSection";
-import Checkmark from "../assets/Checkmark.png"; // ✅ Importera bilden
+import Checkmark from "../assets/Checkmark.png";
 import "../styles/FAQ.css";
 
 function FAQ() {
@@ -9,24 +9,30 @@ function FAQ() {
   const [openSection, setOpenSection] = useState<string | null>(firstSection);
 
   const handleAnchorClick = (section: string) => {
-  setOpenSection(section);
+    setOpenSection(section);
 
-  setTimeout(() => {
-    const target = document.getElementById(`section-${section}`);
-    if (target) {
-      const yOffset = -30;
-      const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  }, 200);
-};
-
+    setTimeout(() => {
+      const target = document.getElementById(`section-${section}`);
+      if (target) {
+        const yOffset = -30;
+        const y =
+          target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 200);
+  };
 
   return (
-    <div className="faq-section">
-      <h2 className="faq-title-heading">Sök svar utifrån kategori:</h2>
-      <div className="faq-anchors">
+    <section
+      className="faq-section"
+      aria-labelledby="faq-category-heading"
+      role="region"
+    >
+      <h2 id="faq-category-heading" className="faq-title-heading">
+        Sök svar utifrån kategori:
+      </h2>
+
+      <div className="faq-anchors" role="tablist" aria-label="FAQ-kategorier">
         {Object.keys(faqData).map((section) => {
           const isActive = openSection === section;
           return (
@@ -34,13 +40,17 @@ function FAQ() {
               key={section}
               className={`faq-anchor-btn ${isActive ? "active" : ""}`}
               onClick={() => handleAnchorClick(section)}
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={`section-${section}`}
             >
               {section}
               {isActive && (
                 <img
                   src={Checkmark}
-                  alt="checkmark"
+                  alt="Vald kategori"
                   className="checkmark-icon"
+                  aria-hidden="true"
                 />
               )}
             </button>
@@ -60,7 +70,7 @@ function FAQ() {
           }
         />
       ))}
-    </div>
+    </section>
   );
 }
 
