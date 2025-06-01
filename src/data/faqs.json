@@ -1,0 +1,34 @@
+{
+  "Båtförsäkring": [
+    {
+      "question": "Har jag en skyldighet att försäkra min båt?",
+      "answer": "Nej, men det är starkt rekommenderat att du gör det."
+    },
+    {
+      "question": "Vad är försäkrat i min båtförsäkring?",
+      "answer": "Det kan inkludera skador på båten, ansvarsskydd och mer."
+    },
+    {
+      "question": "Vad kostar det att försäkra min båt?",
+      "answer": "Det beror på båtens typ, storlek, och var den används."
+    }
+  ],
+  "Rabatter": [
+    {
+      "question": "Finns det samlingsrabatt?",
+      "answer": "Ja, om du har flera försäkringar samlade får du rabatt."
+    }
+  ],
+  "Skada": [
+    {
+      "question": "Vad gör jag om min båt skadas?",
+      "answer": "Anmäl skadan så snabbt som möjligt via Mina sidor."
+    }
+  ],
+  "Betalning": [
+    {
+      "question": "Hur betalar jag min försäkring?",
+      "answer": "Du kan betala via autogiro eller faktura."
+    }
+  ]
+}

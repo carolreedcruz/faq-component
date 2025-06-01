@@ -1,43 +1,45 @@
 import { useState } from "react";
+import faqData from "../data/faqs.json";
 import "../styles/FAQ.css";
 
+type Section = keyof typeof faqData;
 type Question = {
   question: string;
   answer: string;
 };
 
-const questions: Question[] = [
-  {
-    question: "Har jag en skyldighet att försäkra min båt?",
-    answer: "Nej, men det är starkt rekommenderat att du gör det.",
-  },
-  {
-    question: "Vad är försäkrat i min båtförsäkring?",
-    answer: "Det kan inkludera skador på båten, ansvarsskydd och mer.",
-  },
-  {
-    question: "Vad kostar det att försäkra min båt?",
-    answer: "Det beror på båtens typ, storlek, och var den används.",
-  },
-  // Ändrar till json fil sen.
-];
-
 function FAQ() {
+  const [activeSection, setActiveSection] = useState<Section>("Båtförsäkring");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleQuestion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleSectionChange = (section: Section) => {
+    setActiveSection(section);
+    setOpenIndex(null);
   };
+
+  const questions = faqData[activeSection];
 
   return (
     <div className="faq-section">
-      <h2 className="faq-title">Båtförsäkring</h2>
+      <div className="faq-tabs">
+        {Object.keys(faqData).map((section) => (
+          <button
+            key={section}
+            className={`faq-tab ${activeSection === section ? "active" : ""}`}
+            onClick={() => handleSectionChange(section as Section)}
+          >
+            {section}
+          </button>
+        ))}
+      </div>
+
+      <h2 className="faq-title">{activeSection}</h2>
       <ul className="faq-list">
-        {questions.map((item, index) => (
+        {questions.map((item: Question, index: number) => (
           <li key={index} className="faq-item">
             <button
               className="faq-question"
-              onClick={() => toggleQuestion(index)}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               {item.question}
               <span className={`arrow ${openIndex === index ? "open" : ""}`}>

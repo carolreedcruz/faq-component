@@ -8,6 +8,32 @@
   margin-bottom: 20px;
 }
 
+.faq-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.faq-tab {
+  background-color: #ddd;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.faq-tab:hover {
+  background-color: #ccc;
+}
+
+.faq-tab.active {
+  background-color: #005aa7;
+  color: white;
+}
+
 .faq-list {
   list-style: none;
   padding: 0;
@@ -47,4 +73,5 @@
   font-size: 14px;
   background-color: #f9f9f9;
   border-top: 1px solid #ccc;
+  transition: all 0.2s ease;
 }
