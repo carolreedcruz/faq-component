@@ -1,10 +1,12 @@
 import "./styles/App.css";
 import FAQ from "./components/FAQ";
+import NavbarImage from "./assets/Navbar.png";
+import FooterImage from "./assets/Footer.png";
 
 function App() {
   return (
     <div className="app">
-      <header className="header-placeholder">Header</header>
+      <img src={NavbarImage} alt="Header" className="static-image" />
 
       <section className="hero-section">
         <div className="hero-text">
@@ -18,7 +20,7 @@ function App() {
 
       <FAQ />
 
-      <footer className="footer-placeholder">Footer</footer>
+      <img src={FooterImage} alt="Footer" className="static-image" />
     </div>
   );
 }
