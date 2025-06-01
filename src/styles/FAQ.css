@@ -171,3 +171,7 @@
 .faq-answer li {
   margin-bottom: 5px;
 }
+
+.faq-section-content-wrapper {
+  transition: max-height 0.4s ease;
+}

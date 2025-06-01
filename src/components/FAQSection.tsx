@@ -52,8 +52,17 @@ function FAQSection({ id, title, questions, isOpen, toggleSection }: Props) {
         />
       </button>
 
-      {isOpen && (
-        <ul className="faq-list" id={`${id}-list`}>
+      <div
+        className={`faq-section-content-wrapper ${isOpen ? "open" : ""}`}
+        style={{
+          maxHeight: isOpen ? "1000px" : "0",
+          overflow: "hidden",
+          transition: "max-height 0.4s ease",
+        }}
+        id={`${id}-list`}
+        aria-labelledby={`${id}-heading`}
+      >
+        <ul className="faq-list">
           {questions.map((item, index) => {
             const isOpenItem = openIndex === index;
             const questionId = `${id}-question-${index}`;
@@ -80,20 +89,27 @@ function FAQSection({ id, title, questions, isOpen, toggleSection }: Props) {
                   />
                 </button>
 
-                {isOpenItem && (
+                <div
+                  id={answerId}
+                  className={`faq-answer-wrapper ${isOpenItem ? "open" : ""}`}
+                  role="region"
+                  aria-labelledby={questionId}
+                  style={{
+                    maxHeight: isOpenItem ? "500px" : "0",
+                    overflow: "hidden",
+                    transition: "max-height 0.4s ease",
+                  }}
+                >
                   <div
-                    id={answerId}
                     className="faq-answer"
-                    role="region"
-                    aria-labelledby={questionId}
                     dangerouslySetInnerHTML={{ __html: item.answer }}
                   />
-                )}
+                </div>
               </li>
             );
           })}
         </ul>
-      )}
+      </div>
     </section>
   );
 }
