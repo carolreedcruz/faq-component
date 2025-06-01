@@ -1,7 +1,7 @@
 import { useState } from "react";
 import faqData from "../data/faqs.json";
 import FAQSection from "./FAQSection";
-import Checkmark from "../assets/Checkmark.png";
+import Check from "../assets/Check.svg"
 import "../styles/FAQ.css";
 
 function FAQ() {
@@ -47,7 +47,7 @@ function FAQ() {
               {section}
               {isActive && (
                 <img
-                  src={Checkmark}
+                  src={Check}
                   alt="Vald kategori"
                   className="checkmark-icon"
                   aria-hidden="true"
