@@ -2,6 +2,7 @@ import "./styles/App.css";
 import FAQ from "./components/FAQ";
 import NavbarImage from "./assets/Navbar.png";
 import FooterImage from "./assets/Footer.png";
+import HeroImage from "./assets/header-image.jpg";
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
           aria-labelledby="faq-title"
           role="region"
         >
+          <img
+            src={HeroImage}
+            alt="En segelbåt på ett öppet hav med solreflektioner i vattnet och berg i bakgrunden"
+            className="hero-background-image"
+          />
+          <div className="hero-overlay" />
           <div className="hero-text">
             <h1 id="faq-title">Vanliga frågor och svar</h1>
             <p>
