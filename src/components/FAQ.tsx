@@ -1,52 +1,53 @@
 import { useState } from "react";
 import faqData from "../data/faqs.json";
+import FAQSection from "./FAQSection";
 import "../styles/FAQ.css";
 
-type Question = {
-  question: string;
-  answer: string;
-};
-
 function FAQ() {
-  const [openItems, setOpenItems] = useState<{ [key: string]: number | null }>(
+  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>(
     {}
   );
 
-  const toggleQuestion = (section: string, index: number) => {
-    setOpenItems((prev) => ({
+  const handleAnchorClick = (section: string) => {
+    setOpenSections((prev) => ({
       ...prev,
-      [section]: prev[section] === index ? null : index,
+      [section]: true,
     }));
+
+    const target = document.getElementById(`section-${section}`);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <div className="faq-section">
-      {Object.entries(faqData).map(([sectionTitle, questions]) => (
-        <div key={sectionTitle} className="faq-group">
-          <h2 className="faq-title">{sectionTitle}</h2>
-          <ul className="faq-list">
-            {(questions as Question[]).map((item, index) => (
-              <li key={index} className="faq-item">
-                <button
-                  className="faq-question"
-                  onClick={() => toggleQuestion(sectionTitle, index)}
-                >
-                  {item.question}
-                  <span
-                    className={`arrow ${
-                      openItems[sectionTitle] === index ? "open" : ""
-                    }`}
-                  >
-                    ⌄
-                  </span>
-                </button>
-                {openItems[sectionTitle] === index && (
-                  <div className="faq-answer">{item.answer}</div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="faq-anchors">
+        {Object.keys(faqData).map((section) => (
+          <button
+            key={section}
+            className="faq-anchor-btn"
+            onClick={() => handleAnchorClick(section)}
+          >
+            {section}
+          </button>
+        ))}
+      </div>
+
+      {Object.entries(faqData).map(([title, questions]) => (
+        <FAQSection
+          key={title}
+          id={`section-${title}`}
+          title={title}
+          questions={questions}
+          isOpen={openSections[title] ?? false}
+          toggleSection={() =>
+            setOpenSections((prev) => ({
+              ...prev,
+              [title]: !prev[title],
+            }))
+          }
+        />
       ))}
     </div>
   );

@@ -79,3 +79,35 @@
 .faq-group {
   margin-bottom: 40px;
 }
+
+.faq-anchors {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.faq-anchor-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.faq-anchor-btn:hover {
+  background-color: #ddd;
+}
+
+.faq-section-toggle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  padding: 10px 0;
+}
