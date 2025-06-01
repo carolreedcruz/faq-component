@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# Atlantica – FAQ Page Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a complete redesign of Atlantica’s FAQ page with a strong focus on improving user experience, accessibility, and visual clarity.
 
-Currently, two official plugins are available:
+## Overview of Improvements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Accessibility Enhancements
 
-## Expanding the ESLint configuration
+- Semantic HTML is used throughout, including `<section>` tags and `role="region"` to better support screen readers.
+- Toggle buttons for FAQ categories and questions use `aria-expanded`, `aria-controls`, and proper heading structure.
+- Keyboard navigation is fully supported with logical tab order and clear focus indicators.
+- An attempt was made to improve screen reader recognition of decorative and informative images using `alt` text and `role="img"`. However, due to limitations with Windows Narrator, not all images were reliably announced despite correct markup.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Improved Navigation Structure
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- The original site used links in a sidebar to navigate FAQ categories. This was replaced with clearly labeled, equally sized buttons for each category.
+- These buttons are easier to interact with, especially on mobile devices, and provide a cleaner, more structured overview.
+- On click, the selected section scrolls smoothly into view with intentional spacing above to avoid overlap and confusion.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Better Interaction Design
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Each FAQ section expands to show related questions. Individual answers can be shown or hidden using toggle buttons.
+- When a section is opened, users are guided directly to the content for easier navigation.
+- All buttons have visible states when hovered or focused, which helps all users—including those navigating with keyboard or screen readers—understand what is selected.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Visual and Typographic Improvements
+
+- The hero image includes a radial gradient overlay to ensure that the text remains readable regardless of background contrast.
+- The site header and footer were replaced with actual images from Atlantica’s current website for a more branded and realistic prototype.
+- Typography has been customized:
+  - **Inter** is used for headings and UI elements instead of *27 sans*, which is Atlantica’s original brand font (not freely available).
+  - **Montserrat** is used for body text such as FAQ answers to enhance readability.
+
+### Content Flexibility
+
+- All FAQ content is stored in a JSON file, making it easy to scale or update.
+- The answer field supports basic HTML formatting for:
+  - Paragraph breaks
+  - Hyperlinks
+  - Bullet lists (with accessible list styling)
+
+## Technical Stack
+
+- **React** + **Vite** for fast development and modular structure.
+- **CSS** (custom, no frameworks) for styling and responsive layout.
+- **Netlify** for hosting the live version of the project online.
+
+## Summary
+
+This redesign delivers a more accessible, mobile-friendly, and user-centered FAQ experience. While full screen reader support for decorative images was not completely successful, best practices were followed. The layout, navigation, and typography are tailored for clarity and align better with Atlantica’s brand identity resulting in a FAQ page that is easier to navigate and more pleasant to use.
