@@ -2,3 +2,49 @@
   padding: 40px 20px;
   background-color: #f4f4f4;
 }
+
+.faq-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 15px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+}
