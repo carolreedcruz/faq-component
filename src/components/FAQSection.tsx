@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import BlueArrow from "../assets/arrow.blue.png";
 import WhiteArrow from "../assets/TH-Arrow.white.png";
 
@@ -22,12 +22,6 @@ function FAQSection({ id, title, questions, isOpen, toggleSection }: Props) {
   const toggleQuestion = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
-
-  useEffect(() => {
-    if (isOpen && questionRefs.current[0]) {
-      questionRefs.current[0].focus();
-    }
-  }, [isOpen]);
 
   return (
     <section
