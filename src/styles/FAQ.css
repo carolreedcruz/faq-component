@@ -75,3 +75,7 @@
   border-top: 1px solid #ccc;
   transition: all 0.2s ease;
 }
+
+.faq-group {
+  margin-bottom: 40px;
+}

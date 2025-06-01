@@ -2,56 +2,52 @@ import { useState } from "react";
 import faqData from "../data/faqs.json";
 import "../styles/FAQ.css";
 
-type Section = keyof typeof faqData;
 type Question = {
   question: string;
   answer: string;
 };
 
 function FAQ() {
-  const [activeSection, setActiveSection] = useState<Section>("Båtförsäkring");
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openItems, setOpenItems] = useState<{ [key: string]: number | null }>(
+    {}
+  );
 
-  const handleSectionChange = (section: Section) => {
-    setActiveSection(section);
-    setOpenIndex(null);
+  const toggleQuestion = (section: string, index: number) => {
+    setOpenItems((prev) => ({
+      ...prev,
+      [section]: prev[section] === index ? null : index,
+    }));
   };
-
-  const questions = faqData[activeSection];
 
   return (
     <div className="faq-section">
-      <div className="faq-tabs">
-        {Object.keys(faqData).map((section) => (
-          <button
-            key={section}
-            className={`faq-tab ${activeSection === section ? "active" : ""}`}
-            onClick={() => handleSectionChange(section as Section)}
-          >
-            {section}
-          </button>
-        ))}
-      </div>
-
-      <h2 className="faq-title">{activeSection}</h2>
-      <ul className="faq-list">
-        {questions.map((item: Question, index: number) => (
-          <li key={index} className="faq-item">
-            <button
-              className="faq-question"
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            >
-              {item.question}
-              <span className={`arrow ${openIndex === index ? "open" : ""}`}>
-                ⌄
-              </span>
-            </button>
-            {openIndex === index && (
-              <div className="faq-answer">{item.answer}</div>
-            )}
-          </li>
-        ))}
-      </ul>
+      {Object.entries(faqData).map(([sectionTitle, questions]) => (
+        <div key={sectionTitle} className="faq-group">
+          <h2 className="faq-title">{sectionTitle}</h2>
+          <ul className="faq-list">
+            {(questions as Question[]).map((item, index) => (
+              <li key={index} className="faq-item">
+                <button
+                  className="faq-question"
+                  onClick={() => toggleQuestion(sectionTitle, index)}
+                >
+                  {item.question}
+                  <span
+                    className={`arrow ${
+                      openItems[sectionTitle] === index ? "open" : ""
+                    }`}
+                  >
+                    ⌄
+                  </span>
+                </button>
+                {openItems[sectionTitle] === index && (
+                  <div className="faq-answer">{item.answer}</div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }
