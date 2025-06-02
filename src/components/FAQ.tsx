@@ -1,7 +1,7 @@
 import { useState } from "react";
 import faqData from "../data/faqs.json";
 import FAQSection from "./FAQSection";
-import Check from "../assets/Check.svg"
+import Check from "../assets/Check.svg";
 import "../styles/FAQ.css";
 
 function FAQ() {
@@ -11,15 +11,17 @@ function FAQ() {
   const handleAnchorClick = (section: string) => {
     setOpenSection(section);
 
-    setTimeout(() => {
-      const target = document.getElementById(`section-${section}`);
-      if (target) {
-        const yOffset = -30;
-        const y =
-          target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    }, 200);
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const target = document.getElementById(`section-${section}`);
+        if (target) {
+          const yOffset = -30;
+          const y =
+            target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 300);
+    });
   };
 
   return (
