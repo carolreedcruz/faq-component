@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import faqData from "../data/faqs.json";
 import FAQSection from "./FAQSection";
 import Check from "../assets/Check.svg";
@@ -7,6 +7,14 @@ import "../styles/FAQ.css";
 function FAQ() {
   const firstSection = Object.keys(faqData)[0];
   const [openSection, setOpenSection] = useState<string | null>(firstSection);
+  
+  useEffect(() => {
+  const activeBtn = document.querySelector(".faq-anchor-btn.active");
+  if (activeBtn) {
+    activeBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}, []);
+
 
   const handleAnchorClick = (section: string) => {
     setOpenSection(section);
