@@ -7,13 +7,13 @@ import HeroImage from "./assets/header-image.jpg";
 function App() {
   return (
     <div className="app">
-      <header role="banner">
+      {/* <header role="banner">
         <img
           src={NavbarImage}
           alt="Navigationsmeny med logotyp och länkar"
           className="static-image"
         />
-      </header>
+      </header> */}
 
       <main>
         <section
@@ -39,13 +39,13 @@ function App() {
         <FAQ />
       </main>
 
-      <footer role="contentinfo">
+      {/* <footer role="contentinfo">
         <img
           src={FooterImage}
           alt="Företagsinformation, supportlänkar och kontaktuppgifter"
           className="static-image"
         />
-      </footer>
+      </footer> */}
     </div>
   );
 }
